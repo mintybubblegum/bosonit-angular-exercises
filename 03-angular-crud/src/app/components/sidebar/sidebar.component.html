@@ -1,0 +1,82 @@
+<div class="col-md-2">
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" autocomplete="off">
+
+        <div>
+            <label>Username</label>
+                <input type="text" class="form-control mb-2" formControlName="username">
+        </div>
+        
+        <div>
+            <label>Password</label>
+            <div >
+                <input type="password" class="form-control mb-2" formControlName="password">
+
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label>Confirm Password</label>
+            <div>
+                <input type="password"
+                    class="form-control"
+                    formControlName="password2">
+
+                <span *ngIf="isNotValidField('password2')" class="form-text text-danger">
+                    Las contraseñas deben de ser iguales
+                </span>
+            </div>
+        </div>
+        
+        <div>
+            <label for="email">Email</label>
+            <div>
+                <input id="email" type="email" class="form-control mb-2" name="email" required autocomplete="email" formControlName="email">
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck" formControlName="check">
+                <label class="form-check-label mb-2" for="gridCheck">
+                Send promotional offers
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <label for="inputState">Country</label>
+            <select id="inputState" class="form-select mb-2">
+                <option selected>Choose...</option>
+                <option>Argentina</option>
+                <option>Bulgaria</option>
+                <option>Canada</option>
+                <option>Croatia</option>
+                <option>Denmark</option>
+                <option>Ireland</option>
+                <option>Kenia</option>
+                <option>Serbia</option>
+                <option>Spain</option>
+                <option>Ukraine</option>
+                <option>United Kingdom</option>
+
+            </select>
+        </div>
+        
+        <div>
+            <label>City</label>
+                <input type="password" class="form-control mb-2" formControlName="city">
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary"
+                        type="submit">
+                    Create
+                </button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
