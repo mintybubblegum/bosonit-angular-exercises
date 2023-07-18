@@ -23,7 +23,7 @@
                     formControlName="password2">
 
                 <span *ngIf="isNotValidField('password2')" class="form-text text-danger">
-                    Las contraseñas deben de ser iguales
+                    The password confirmation does not match.
                 </span>
             </div>
         </div>
@@ -65,7 +65,7 @@
         
         <div>
             <label>City</label>
-                <input type="password" class="form-control mb-2" formControlName="city">
+                <input type="text" class="form-control mb-2" formControlName="city">
         </div>
 
         <div class="row">
